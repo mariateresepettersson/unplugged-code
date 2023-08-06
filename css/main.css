@@ -1,6 +1,5 @@
-/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
 
-/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -84,8 +83,20 @@ textarea {
 }
 
 /* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
 /* General Styles */
 
 html {
@@ -115,6 +126,7 @@ h2 {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 1.875em;
+  margin: 0;
 }
 
 h3,
@@ -147,7 +159,8 @@ address {
   margin: 50px 0;
 }
 
-/* ---------------- Base Header - Footer Styles ---------------- */
+/* -------------------- Base Header - Footer Styles -------------------- */
+
 header {
   display: flex;
   justify-content: center;
@@ -156,11 +169,11 @@ header {
 }
 
 header .content-wrapper {
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  margin: 0;
 }
 
 header figure {
@@ -168,10 +181,10 @@ header figure {
 }
 
 .header-divider {
-  width: 100%;
+  background: #3a3a3a;
   height: 1px;
+  width: 100%;
   margin: 10px 0 20px 0;
-  background-color: #3a3a3a;
 }
 
 header nav {
@@ -182,9 +195,9 @@ header nav {
 }
 
 header nav ul {
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  width: 100%;
 }
 
 header nav ul li {
@@ -218,41 +231,49 @@ footer .social-icons {
 }
 
 footer .social-icons p {
+  background-color: #527158;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer .social-icons p i {
+  font-size: 1.3125em;
 }
 
 footer .copyright {
   margin: 20px 0;
 }
 
-/* ---------------- Mobile Style - Homepage ---------------- */
+/* -------------------- Mobile Styles - Homepage -------------------- */
 
 /* Hero Area */
 
 .hero-area {
-  display: flex;
-  justify-content: center;
-  background: url(../img/unplugged-retreat.jpg) center no-repeat #333;
+  background: url(../img/unplugged-retreat.jpg);
   background-size: cover;
   background-position: center;
   min-height: 500px;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-area h1 {
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;
   font-size: 2.25em;
-  line-height: 1.2;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
   font-weight: 500;
+  line-height: 1.2;
 }
 
 /* Aside */
 
 aside {
+  background-color: #527158;
   display: flex;
   justify-content: center;
-  background-color: #527158;
 }
 
 aside .form {
@@ -284,7 +305,7 @@ input[type=button] {
 /* Features */
 
 .features {
-  background: url(../img/unplugged-retreat-features.jpg);
+  background: url('../img/unplugged-retreat-features.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -320,9 +341,9 @@ input[type=button] {
 /* Reviews */
 
 .reviews {
+  background-color: #2a423a;
   display: flex;
   justify-content: center;
-  background-color: #2a423a;
 }
 
 .reviews h2 {
@@ -347,8 +368,8 @@ input[type=button] {
 
 .map figure {
   width: 100%;
-  height: 0; 
-  padding-bottom: 125%; 
+  height: 0;
+  padding-bottom: 125%;
   overflow: hidden;
   position: relative;
 }
@@ -356,9 +377,9 @@ input[type=button] {
 .map iframe {
   width: 100%;
   height: 100%;
-  position: absolute; 
-  top: 0; 
-  left: 0; 
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .contact-section {
@@ -367,7 +388,7 @@ input[type=button] {
   justify-content: center;
 }
 
-.contact-content {
+.contact-content p {
   margin: 0;
 }
 
@@ -410,8 +431,7 @@ input[type=button] {
  * Hide visually and from screen readers
  */
 
-.hidden,
-[hidden] {
+.hidden {
   display: none !important;
 }
 
@@ -424,34 +444,34 @@ input[type=button] {
  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
 
-.sr-only {
+.visuallyhidden {
   border: 0;
-  clip: rect(0, 0, 0, 0);
+  clip: rect(0 0 0 0);
   height: 1px;
   margin: -1px;
   overflow: hidden;
   padding: 0;
   position: absolute;
-  white-space: nowrap;
   width: 1px;
+  white-space: nowrap;
   /* 1 */
 }
 
 /*
- * Extends the .sr-only class to allow the element
+ * Extends the .visuallyhidden class to allow the element
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
 
-.sr-only.focusable:active,
-.sr-only.focusable:focus {
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
   overflow: visible;
   position: static;
-  white-space: inherit;
   width: auto;
+  white-space: inherit;
 }
 
 /*
@@ -474,13 +494,15 @@ input[type=button] {
  *    `:before` to contain the top-margins of child elements.
  */
 
-.clearfix::before,
-.clearfix::after {
+.clearfix:before,
+.clearfix:after {
   content: " ";
+  /* 1 */
   display: table;
+  /* 2 */
 }
 
-.clearfix::after {
+.clearfix:after {
   clear: both;
 }
 
@@ -489,8 +511,9 @@ input[type=button] {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (min-width: 768px) {
-  /* Tablet styles here*/
+
+@media only screen and (min-width:768px) {
+  /*Tablet styles here*/
 
   /* General styles */
   .content-wrapper {
@@ -535,6 +558,7 @@ input[type=button] {
   }
 
   /* Hero Area */
+
   .hero-area {
     min-height: 600px;
   }
@@ -550,7 +574,7 @@ input[type=button] {
     margin: 50px 0;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-content: flex-start;
   }
 
   aside .content-wrapper .form-description,
@@ -560,6 +584,7 @@ input[type=button] {
   }
 
   /* Features */
+
   .features h2 {
     margin-bottom: 20px;
   }
@@ -571,8 +596,12 @@ input[type=button] {
     flex-basis: 50%;
   }
 
-  .features .features-items-description {
+  .features .features-item-description {
     width: 62%;
+  }
+
+  .features i {
+    margin-bottom: 30px;
   }
 
   /* Reviews */
@@ -600,7 +629,7 @@ input[type=button] {
     width: 65%;
   }
 
-  .footer-content {
+  footer .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -618,6 +647,11 @@ input[type=button] {
 
   footer p {
     line-height: 1.285;
+  }
+
+  footer .social-icons {
+    width: 12.5em;
+    justify-content: space-between;
   }
 
   footer .copyright {
@@ -679,20 +713,21 @@ input[type=button] {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width:1200px) {
+  /*Desktop styles here*/
 
-  /* Desktop styles here */
+  /* General styles */
   .content-wrapper {
     max-width: 960px;
   }
 
-  /* General styles*/
+  /* Header */
   header {
     padding: 15px 0;
   }
 
   h2 {
-    font: 2.25em;
+    font-size: 2.25em;
   }
 
   h3,
@@ -726,6 +761,8 @@ input[type=button] {
   }
 
   /* Features */
+
+
   .features h2 {
     width: 90%;
   }
@@ -735,6 +772,7 @@ input[type=button] {
   }
 
   /* Reviews */
+
   .reviews h2 {
     padding-bottom: 50px;
   }
@@ -748,13 +786,13 @@ input[type=button] {
   }
 
   /* ==========================================================================
-   About Page
-   ========================================================================== */
+  About Page
+  ========================================================================== */
   .map figure {
     padding-bottom: 37.5%;
   }
-  
-   .mission h2,
+
+  .mission h2,
   .contact-section .content-wrapper h2 {
     width: 95%;
     font-size: 3em;
@@ -765,8 +803,8 @@ input[type=button] {
   }
 
   /* ==========================================================================
-   FAQ Page
-   ========================================================================== */
+  FAQ Page
+  ========================================================================== */
   .faq h2 {
     width: 100%;
     font-size: 3em;
@@ -777,7 +815,6 @@ input[type=button] {
     font-size: 1.125em;
     line-height: 1;
   }
-
 }
 
 /* ==========================================================================
@@ -789,11 +826,12 @@ input[type=button] {
 @media print {
 
   *,
-  *::before,
-  *::after {
-    background: #fff !important;
+  *:before,
+  *:after {
+    background: transparent !important;
     color: #000 !important;
     /* Black prints faster */
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -803,20 +841,20 @@ input[type=button] {
     text-decoration: underline;
   }
 
-  a[href]::after {
-    content: " (" attr(href) ")";
+  a[href]:after {
+    content: " ("attr(href) ")";
   }
 
-  abbr[title]::after {
-    content: " (" attr(title) ")";
+  abbr[title]:after {
+    content: " ("attr(title) ")";
   }
 
   /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
     content: "";
   }
 
@@ -831,9 +869,9 @@ input[type=button] {
   }
 
   /*
-   * Printing Tables:
-   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
   thead {
     display: table-header-group;
   }
