@@ -108,6 +108,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #e2e3ed;
   text-align: left;
+  background-color: #202322;
 }
 
 ul,
@@ -324,7 +325,6 @@ input[type=button] {
 .features .features-items {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   flex-flow: row wrap;
 }
 
@@ -589,6 +589,10 @@ input[type=button] {
     margin-bottom: 20px;
   }
 
+  .features .features-items {
+    align-items: flex-start;
+  }
+
   .features article {
     display: flex;
     align-items: center;
@@ -633,7 +637,6 @@ input[type=button] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
   }
 
   footer .contact {
